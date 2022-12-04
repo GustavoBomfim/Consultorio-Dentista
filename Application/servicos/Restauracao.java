@@ -1,6 +1,8 @@
-package Application;
+package Application.servicos;
 
-public class Restauracao extends Servico{
+
+
+public class Restauracao extends Servico {
 
     String denteTratado;
 

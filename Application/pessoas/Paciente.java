@@ -8,4 +8,10 @@ public class Paciente extends Pessoa {
         super(nome, rg, endereco, telefone, dataNascimento);
         this.convenio = convenio;
     }
+
+    @Override
+    public String toString(){
+        return "Nome: " + nome + ", RG: " + rg + ", Endereço " + endereco + ", Telefone: " + telefone
+                + ", Data de Nascimento: " + dataNascimento + ", Convenio: " + convenio;
+    }
 }

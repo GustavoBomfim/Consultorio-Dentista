@@ -2,37 +2,46 @@ package Application;
 
 import Application.pessoas.Paciente;
 import Application.pessoas.Profissional;
-import jdk.swing.interop.SwingInterOpUtils;
+
+import java.util.Scanner;
 
 public class Program {
     public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
+        System.out.println("\n-------- BEM-VINDO AO HOSPITAL SÃO LUIZ -------- \n");
+        System.out.println("Digite a opção que deseja fazer: \n 1 - Consultar todos os pacientes; \n 2 - Consultar todos os médicos; \n " +
+                "3 - Cadastrar Profissional");
+        int option = sc.nextInt();
 
 
         Paciente p = new Paciente("Hélio", "25522552-5", "rua restinga, 113",
                 "2552-4578", "20/01/1990", "cartao de todos");
 
         Paciente p2 = new Paciente("Heliana", "3652552-5", "rua restinga, 113",
-                "2552-4578", "10/03/2009", "notridame");
+                "2692-7485", "10/03/2009", "notridame");
 
 
         Profissional pf1 = new Profissional("Cláudio", "5646545-2", "Rua padre", "654645-544",
                 "02/08/1987", "Clínico Geral",Turno.MANHA);
 
 
-        System.out.println();
-        System.out.println("Pacientes:");
-        System.out.println(p.nome + " " + p.rg + " " + p.endereco + " " + p.telefone + " " + p.dataNascimento + " " + p.convenio);
-        System.out.println("--------------------------------------------------------------");
-        System.out.println(p2.nome + " " + p2.rg + " " + p2.endereco + " " + p2.telefone + " " + p2.dataNascimento + " " + p.convenio);
+
+        if(option == 1) {
+            System.out.println();
+            System.out.println("Pacientes:");
+            System.out.println(p);
+            System.out.println("-------------------------------------------------------------------------------------------------------------------------------------------");
+            System.out.println(p2);
+        }
+        else if(option == 2) {
+            System.out.println();
+            System.out.println("Profissionais:");
+            System.out.println(pf1);
+        }
 
         System.out.println();
-        System.out.println("Profissionais:");
-        System.out.println("--------------------------------------------------------------");
-        System.out.println(pf1.nome + " " + pf1.rg + " " + pf1.endereco + " " + pf1.telefone + " " + pf1.dataNascimento + " " +
-                pf1.especialidade + " " + pf1.disponibilidade );
 
-        System.out.println();
 
 
 

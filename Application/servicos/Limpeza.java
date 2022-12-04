@@ -1,4 +1,5 @@
-package Application;
+package Application.servicos;
+
 
 public class Limpeza extends Servico {
 

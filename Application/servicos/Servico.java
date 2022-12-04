@@ -1,4 +1,4 @@
-package Application;
+package Application.servicos;
 
 public class Servico {
     String Descricao;
@@ -9,7 +9,4 @@ public class Servico {
         Preco = preco;
     }
 
-    void registraServico(){
-
-    }
 }

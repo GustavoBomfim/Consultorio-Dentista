@@ -14,4 +14,9 @@ public class Profissional extends Pessoa {
         this.especialidade = especialidade;
         this.turno = turno;
     }
+
+    public String toString(){
+        return "Nome: " + nome + ", RG: " + rg + ", Endereço " + endereco + ", Telefone: " + telefone
+                + ", Data de Nascimento: " + dataNascimento + ", Especialidade: " + especialidade + ", Turno: " + turno ;
+    }
 }
