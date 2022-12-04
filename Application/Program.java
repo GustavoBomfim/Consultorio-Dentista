@@ -1,5 +1,6 @@
 package Application;
 
+import Application.horarios.Turno;
 import Application.pessoas.Paciente;
 import Application.pessoas.Profissional;
 
@@ -23,7 +24,7 @@ public class Program {
 
 
         Profissional pf1 = new Profissional("Cláudio", "5646545-2", "Rua padre", "654645-544",
-                "02/08/1987", "Clínico Geral",Turno.MANHA);
+                "02/08/1987", "Clínico Geral", Turno.MANHA);
 
 
 
@@ -38,6 +39,35 @@ public class Program {
             System.out.println();
             System.out.println("Profissionais:");
             System.out.println(pf1);
+        }
+        else if(option == 3){
+            System.out.println("Cadastre um novo funcionário: ");
+            System.out.print("Nome: ");
+            String nome = sc.next();
+            System.out.print("RG: ");
+            String rg = sc.next();
+            System.out.print("Endereço: ");
+            String endereco = sc.next();
+            System.out.print("Data de nascimento: ");
+            String dataNascimento = sc.next();
+            System.out.print("Telefone: ");
+            String telefone = sc.next();
+            System.out.print("Especialidade: ");
+            String especialidade = sc.next();
+            System.out.print("Turno: " + " 1 - Manhã, 2 - Tarde, 3 - Noite");
+            int turnoOption = sc.nextInt();
+            if(turnoOption == 1){
+                Profissional.adicionarFuncionario(nome,rg, endereco, telefone, dataNascimento, especialidade, Turno.MANHA);
+            }
+            else if(turnoOption == 2) {
+                Profissional.adicionarFuncionario(nome, rg, endereco, telefone, dataNascimento, especialidade, Turno.TARDE);
+            }
+            else if(turnoOption == 3) {
+                Profissional.adicionarFuncionario(nome, rg, endereco, telefone, dataNascimento, especialidade, Turno.NOITE);
+            }
+            Profissional.adicionarFuncionario(nome, rg, endereco, telefone, dataNascimento, especialidade, Turno.NOITE);
+            System.out.println();
+
         }
 
         System.out.println();

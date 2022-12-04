@@ -1,4 +1,4 @@
-package Application;
+package Application.horarios;
 
 public class Horario {
     String Data;

@@ -7,6 +7,9 @@ public class Pessoa {
     public String telefone;
     public String dataNascimento;
 
+    public Pessoa(){
+
+    }
     public Pessoa(String nome, String rg, String endereco, String telefone, String dataNascimento) {
         this.nome = nome;
         this.rg = rg;

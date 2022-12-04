@@ -1,6 +1,6 @@
 package Application.pessoas;
 
-import Application.Turno;
+import Application.horarios.Turno;
 
 public class Profissional extends Pessoa {
 
@@ -9,10 +9,16 @@ public class Profissional extends Pessoa {
     public Turno turno;
 
 
+    public Profissional(){
+        super();
+    }
     public Profissional(String nome, String rg, String endereco, String telefone, String dataNascimento, String especialidade, Turno turno) {
         super(nome, rg, endereco, telefone, dataNascimento);
         this.especialidade = especialidade;
         this.turno = turno;
+    }
+    public static void adicionarFuncionario(String nome, String rg, String endereco, String telefone, String dataNascimento, String especialidade, Turno turno){
+        new Profissional(nome, rg, endereco, telefone, dataNascimento, especialidade, turno);
     }
 
     public String toString(){
