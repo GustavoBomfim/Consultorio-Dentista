@@ -2,9 +2,12 @@ package Application;
 
 import Application.pessoas.Paciente;
 import Application.pessoas.Profissional;
+import jdk.swing.interop.SwingInterOpUtils;
 
 public class Program {
     public static void main(String[] args) {
+
+
 
         Paciente p = new Paciente("Hélio", "25522552-5", "rua restinga, 113",
                 "2552-4578", "20/01/1990", "cartao de todos");
@@ -14,7 +17,7 @@ public class Program {
 
 
         Profissional pf1 = new Profissional("Cláudio", "5646545-2", "Rua padre", "654645-544",
-                "02/08/1987", "Clínico Geral","segunda à sexta");
+                "02/08/1987", "Clínico Geral",Turno.MANHA);
 
 
         System.out.println();
@@ -28,6 +31,10 @@ public class Program {
         System.out.println("--------------------------------------------------------------");
         System.out.println(pf1.nome + " " + pf1.rg + " " + pf1.endereco + " " + pf1.telefone + " " + pf1.dataNascimento + " " +
                 pf1.especialidade + " " + pf1.disponibilidade );
+
+        System.out.println();
+
+
 
     }
 
